@@ -24,13 +24,14 @@ export function RoomList(){
             </CardHeader>
             <CardContent className="flex flex-col gap-3">
                 {isLoading && <p>Carregando as salas</p>}
+
                 {data?.map(room => {
                     return(
                         <Link 
                             className="flex items-center justify-between rounded-lg border p-3 hover:bg-accent/50" 
                             key={room.id}
-                            to={`/rooms/${room.id}`}>
-                            <div className="flex-1 flex flex-col gap-1">
+                            to={`/room/${room.id}`}>
+                            <div className="flex flex-1 flex-col gap-1">
                                 <h3 className="font-medium">{room.name}</h3>
 
                                 <div className="flex items-center gap-2">
